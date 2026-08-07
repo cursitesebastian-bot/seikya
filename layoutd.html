@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sekuya&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: 'Lucida Sans', sans-serif;
+            background: #f7f7f7;
+            color: #111;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            background:rgba(5, 5, 5, 0.908);
+            position: fixed;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(29, 27, 27, 0.072);
+            box-shadow: 25px 25px 50px rgba(24, 1, 1, 0.613);
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-bottom: 1px;  
+             
+        }
+        
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0 10px;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            list-style: none;
+            font-size: 18px;
+        }
+
+        .sign {
+            color: rgb(240, 234, 234);
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .nav ul li a {
+            display: inline-block;
+            transition: transform 0.2s ease, color 0.2s ease;
+            color: rgb(247, 242, 242);
+            text-decoration: none;
+            gap: 10rem;
+        }
+
+        .nav ul li a:hover,
+        .nav ul li a:focus {
+            transform: scale(1.1);
+            color: #6b1d1d;
+        }
+        section {
+            padding-top: 46px;
+        }
+
+        .hero-banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-banner .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.25);
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            font-family:Sekuya;
+        }
+
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+
+        .show {
+            padding: 50px 20px 20px;
+            text-align: center;
+        }
+
+        .hero{
+            display:flex;
+            grid-template-columns: repeat(6, minmax(110px, 20px));
+            justify-content:center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            height: 500px;
+        }
+
+        .card{
+            flex: 1;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 24px;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: flex 0.5s ease;
+        }
+
+        .card img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card:hover{
+            flex: 6;
+        }
+
+        @media screen and (max-width: 800px){
+            .nav ul li a {
+                font-size: 12px;
+            }
+            section{
+                padding-top: 20px;
+            }
+            .hero-banner {
+                height: 360px;
+            }
+            .hero {
+                grid-template-columns: repeat(6, minmax(0, 1fr));
+            }
+        }
+        @media screen and (max-width:700px){
+            .sign{
+                display:none;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-banner .overlay {
+                letter-spacing: 4px;
+                font-size: 1.3rem;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="sign">S U J A K</div>
+        <ul >
+            <li><a href="">space</a></li>
+            <li><a href="">margin</a></li>
+            <li><a href="">weather</a></li>
+            <li><a href="">lavi</a></li>
+            <li><a href="">blog</a></li>
+            <li><a href="">search</a></li>
+            <li><a href="">list</a></li>
+            <li><a href="">calculation</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="hero-banner">
+            <img src="/Screenshot_25-7-2026_151913_www.youtube.com.jpeg" alt="Hero image">
+            <div class="overlay">P R A S L O </div>
+        </div>
+    </section>
+
+    <div class="show">
+        <h1 style="font-family:Sekuya;">JUST FINISHED A LEVEL</h1>
+        <p style="display:flex; justify-content:center;"> firstly do whatever you want <br> which is in your bucket list </p>
+    </div>
+    
+    <main class="hero">
+        <div class="card"><img src="IMG_0714.JPG" alt="Temple view" loading="lazy"></div>
+        <div class="card"><img src="IMG_0716.JPG" alt="Photo 2" loading="lazy"></div>
+        <div class="card"><img src="IMG_3956.JPG" alt="Photo 3" loading="lazy"></div>
+        <div class="card"><img src="IMG_E5712.JPG" alt="Photo 4" loading="lazy"></div>
+        <div class="card"><img src="IMG_0715.JPG" alt="Photo 5" loading="lazy"></div>
+        <div class="card"><img src="IMG_5948.PNG" alt="Photo 6" loading="lazy"></div>
+    </main>
+    
+</body>
+</html>
